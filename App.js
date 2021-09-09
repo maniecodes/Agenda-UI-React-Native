@@ -8,6 +8,7 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import DetailsAsesoriaScreen from './app/screens/DetailsAsesoria';
 import Page1Screen from './app/screens/Page1';
 import Page2Screen from './app/screens/Page2';
+
 const Tab = createBottomTabNavigator();
 
 const Stack = createStackNavigator();

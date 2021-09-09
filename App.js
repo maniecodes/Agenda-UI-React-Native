@@ -1,13 +1,11 @@
 import 'react-native-gesture-handler';
 import React from 'react';
-import {Text} from 'react-native';
 import Svg, {Path} from 'react-native-svg';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import DetailsAsesoriaScreen from './app/screens/DetailsAsesoria';
 import Page1Screen from './app/screens/Page1';
-import Page2Screen from './app/screens/Page2';
 
 const Tab = createBottomTabNavigator();
 

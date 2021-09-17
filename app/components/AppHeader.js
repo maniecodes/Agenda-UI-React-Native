@@ -7,7 +7,6 @@ import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 const AppHeader = () => {
   return (
     <Header
-      // eslint-disable-next-line react-native/no-inline-styles
       containerStyle={{backgroundColor: '#fff', justifyContent: 'space-around'}}
       leftComponent={
         <View>

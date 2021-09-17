@@ -5,6 +5,7 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import DetailsAsesoriaScreen from './app/screens/DetailsAsesoria';
+import BusquedaScreen from './app/screens/Busqueda';
 import Page1Screen from './app/screens/Page1';
 
 const Tab = createBottomTabNavigator();
@@ -18,6 +19,17 @@ function HomeStackScreen() {
         headerShown: false,
       }}>
       <Stack.Screen name="details" component={DetailsAsesoriaScreen} />
+    </Stack.Navigator>
+  );
+}
+
+function BusquedaStackScreen() {
+  return (
+    <Stack.Navigator
+      screenOptions={{
+        headerShown: false,
+      }}>
+      <Stack.Screen name="busqueda" component={BusquedaScreen} />
     </Stack.Navigator>
   );
 }
@@ -118,6 +130,20 @@ export default function App() {
                   />
                 </Svg>
               );
+            } else if (route.name === 'Busqueda') {
+              iconName = (
+                <Svg
+                  width="32"
+                  height="32"
+                  viewBox="0 0 37 37"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <Path
+                    d="M7 28.9218C7 29.4992 7.44727 29.9673 8 29.9673C8.55273 29.9673 9 29.4992 9 28.9218C9 25.2326 11.0315 21.9665 14.1981 20.422C15.2939 21.1666 16.5977 21.6036 17.999 21.6036C19.4057 21.6036 20.7144 21.1636 21.8129 20.4139C22.7582 20.8804 23.6342 21.5081 24.3633 22.2698C26.0635 24.0478 27 26.4103 27 28.9218C27 29.4992 27.4473 29.9673 28 29.9673C28.5527 29.9673 29 29.4992 29 28.9218C29 25.8518 27.8555 22.9646 25.7773 20.7915C25.082 20.0641 24.2738 19.4404 23.4067 18.9263C24.4009 17.6624 24.999 16.0457 24.999 14.2855C24.999 10.2502 21.8584 6.96729 17.999 6.96729C14.1396 6.96729 10.999 10.2502 10.999 14.2855C10.999 16.0414 11.5947 17.6542 12.5845 18.9167C9.15167 20.9373 7 24.7126 7 28.9218ZM17.999 9.05819C20.7559 9.05819 22.999 11.4033 22.999 14.2855C22.999 17.1676 20.7559 19.5127 17.999 19.5127C15.2422 19.5127 12.999 17.1676 12.999 14.2855C12.999 11.4033 15.2422 9.05819 17.999 9.05819Z"
+                    fill={focused ? '#4E31EB' : '#7E8FB9'}
+                  />
+                </Svg>
+              );
             }
 
             return iconName;
@@ -128,7 +154,8 @@ export default function App() {
         <Tab.Screen name="Home" component={HomeStackScreen} />
         <Tab.Screen name="Settings" component={SettingsStackScreen} />
         <Tab.Screen name="Scan" component={SettingsStackScreen} />
-        <Tab.Screen name="Profile" component={SettingsStackScreen} />
+        {/* <Tab.Screen name="Profile" component={SettingsStackScreen} /> */}
+        <Tab.Screen name="Busqueda" component={BusquedaStackScreen} />
       </Tab.Navigator>
     </NavigationContainer>
   );

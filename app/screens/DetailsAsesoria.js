@@ -1,6 +1,3 @@
-/* eslint-disable no-unreachable */
-/* eslint-disable no-lone-blocks */
-/* eslint-disable react-native/no-inline-styles */
 import React, {useState} from 'react';
 import {
   SafeAreaView,

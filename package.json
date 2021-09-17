@@ -28,6 +28,7 @@
     "react-native-switch-toggle": "^2.2.1",
     "react-native-tab-view": "^3.1.1",
     "react-native-vector-icons": "^8.1.0",
+    "rn-range-slider": "^2.1.1",
     "styled-components": "^5.3.1",
     "styled-system": "^5.1.5",
     "toggle-switch-react-native": "^3.2.0"

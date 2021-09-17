@@ -7,7 +7,7 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import DetailsAsesoriaScreen from './app/screens/DetailsAsesoria';
 import BusquedaScreen from './app/screens/Busqueda';
 import DocumentScreen from './app/screens/Document';
-import Page1Screen from './app/screens/Page1';
+import ProfessionScreen from './app/screens/Profession';
 
 const Tab = createBottomTabNavigator();
 
@@ -46,13 +46,13 @@ function DocumentStackScreen() {
   );
 }
 
-function SettingsStackScreen() {
+function ProfessionStackScreen() {
   return (
     <Stack.Navigator
       screenOptions={{
         headerShown: false,
       }}>
-      <Stack.Screen name="page1" component={Page1Screen} />
+      <Stack.Screen name="profession" component={ProfessionScreen} />
     </Stack.Navigator>
   );
 }
@@ -80,7 +80,7 @@ export default function App() {
                   />
                 </Svg>
               );
-            } else if (route.name === 'Settings') {
+            } else if (route.name === 'Profession') {
               iconName = (
                 <Svg
                   width="32"
@@ -164,7 +164,8 @@ export default function App() {
           tabBarInactiveTintColor: '#7E8FB9',
         })}>
         <Tab.Screen name="Home" component={HomeStackScreen} />
-        <Tab.Screen name="Settings" component={SettingsStackScreen} />
+        {/* <Tab.Screen name="Settings" component={SettingsStackScreen} /> */}
+        <Tab.Screen name="Profession" component={ProfessionStackScreen} />
         {/* <Tab.Screen name="Scan" component={SettingsStackScreen} /> */}
         <Tab.Screen name="Document" component={DocumentStackScreen} />
         {/* <Tab.Screen name="Profile" component={SettingsStackScreen} /> */}

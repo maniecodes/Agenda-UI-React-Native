@@ -6,6 +6,7 @@ import {createStackNavigator} from '@react-navigation/stack';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import DetailsAsesoriaScreen from './app/screens/DetailsAsesoria';
 import BusquedaScreen from './app/screens/Busqueda';
+import DocumentScreen from './app/screens/Document';
 import Page1Screen from './app/screens/Page1';
 
 const Tab = createBottomTabNavigator();
@@ -30,6 +31,17 @@ function BusquedaStackScreen() {
         headerShown: false,
       }}>
       <Stack.Screen name="busqueda" component={BusquedaScreen} />
+    </Stack.Navigator>
+  );
+}
+
+function DocumentStackScreen() {
+  return (
+    <Stack.Navigator
+      screenOptions={{
+        headerShown: false,
+      }}>
+      <Stack.Screen name="document" component={DocumentScreen} />
     </Stack.Navigator>
   );
 }
@@ -86,7 +98,7 @@ export default function App() {
                   />
                 </Svg>
               );
-            } else if (route.name === 'Scan') {
+            } else if (route.name === 'Document') {
               iconName = (
                 <Svg
                   width="32"
@@ -153,9 +165,11 @@ export default function App() {
         })}>
         <Tab.Screen name="Home" component={HomeStackScreen} />
         <Tab.Screen name="Settings" component={SettingsStackScreen} />
-        <Tab.Screen name="Scan" component={SettingsStackScreen} />
+        {/* <Tab.Screen name="Scan" component={SettingsStackScreen} /> */}
+        <Tab.Screen name="Document" component={DocumentStackScreen} />
         {/* <Tab.Screen name="Profile" component={SettingsStackScreen} /> */}
         <Tab.Screen name="Busqueda" component={BusquedaStackScreen} />
+       
       </Tab.Navigator>
     </NavigationContainer>
   );

@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import {
   SafeAreaView,
   View,
@@ -7,10 +7,10 @@ import {
   Dimensions,
   FlatList,
 } from 'react-native';
-import {TouchableOpacity} from 'react-native-gesture-handler';
-import {Card} from 'react-native-elements';
-import Svg, {G, Path, Rect, Defs, ClipPath} from 'react-native-svg';
-import {FlatGrid} from 'react-native-super-grid';
+import { TouchableOpacity } from 'react-native-gesture-handler';
+import { Card } from 'react-native-elements';
+import Svg, { G, Path, Rect, Defs, ClipPath } from 'react-native-svg';
+import { FlatGrid } from 'react-native-super-grid';
 import AppHeader from '../components/AppHeader';
 import ListTab from '../components/ListTab';
 import Profile from '../components/Profile';
@@ -262,7 +262,7 @@ const DetailsAsesoriaScreen = props => {
     setStatus(status);
   };
 
-  const renderItem = ({item, index}) => {
+  const renderItem = ({ item, index }) => {
     //   Change this to switch
     if (item.name === 'first') {
       // Change this to a component
@@ -271,9 +271,9 @@ const DetailsAsesoriaScreen = props => {
           <View style={styles.itemBody}>
             <Card containerStyle={styles.card}>
               <View>
-                <Text style={{fontSize: 14, color: '#7E8FB9'}}>{e.date}</Text>
+                <Text style={{ fontSize: 14, color: '#7E8FB9' }}>{e.date}</Text>
                 <Text style={styles.itemTitle}>{e.title}</Text>
-                <Text style={{fontSize: 14, color: '#424049'}}>
+                <Text style={{ fontSize: 14, color: '#424049' }}>
                   {e.description}
                 </Text>
               </View>
@@ -303,7 +303,7 @@ const DetailsAsesoriaScreen = props => {
           <View style={styles.itemBody}>
             <View>
               <Card containerStyle={styles.documentCard}>
-                <View style={{alignItems: 'center'}}>{item.file()}</View>
+                <View style={{ alignItems: 'center' }}>{item.file()}</View>
               </Card>
               <Text
                 numberOfLines={2}
@@ -315,7 +315,7 @@ const DetailsAsesoriaScreen = props => {
                 }}>
                 {item.title}
               </Text>
-              <Text style={[styles.itemTitle, {paddingLeft: 20}]}>
+              <Text style={[styles.itemTitle, { paddingLeft: 20 }]}>
                 {item.size}
               </Text>
             </View>
@@ -329,7 +329,7 @@ const DetailsAsesoriaScreen = props => {
   return (
     <SafeAreaView style={styles.container}>
       {/* App Header Begin*/}
-      <AppHeader />
+      <AppHeader title='Historial assoria' color='#fff'/>
       {/* App Header End*/}
 
       {/* Top profile being */}
@@ -337,7 +337,7 @@ const DetailsAsesoriaScreen = props => {
       {/* Top profile end */}
 
       {/* List of Items  */}
-      <View style={{flex: 1, backgroundColor: '#F9F7FE'}}>
+      <View style={{ flex: 1, backgroundColor: '#F9F7FE' }}>
         <View style={styles.listTab}>
           {ListTab.map(e => (
             <TouchableOpacity
@@ -361,7 +361,7 @@ const DetailsAsesoriaScreen = props => {
         </View>
 
         {datalist[0].name === 'third' ? (
-          <View style={{flex: 2.0}}>
+          <View style={{ flex: 2.0 }}>
             <Text
               style={{
                 fontWeight: 'bold',

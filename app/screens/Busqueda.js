@@ -10,7 +10,7 @@ import {
 } from 'react-native';
 import Slider from 'rn-range-slider';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
-import { Card, Button } from 'react-native-elements';
+import { Card } from 'react-native-elements';
 import TitleHeader from '../components/TitleHeader';
 import Thumb from '../components/slider/Thumb';
 import Rail from '../components/slider/Rail';
@@ -18,7 +18,7 @@ import RailSelected from '../components/slider/RailSelected';
 import Notch from '../components/slider/Notch';
 import Label from '../components/slider/Label';
 import { ScrollView } from 'react-native-gesture-handler';
-// import TextButton from '../components/slider/TextButton';
+import AppButton from '../components/Button';
 
 
 const BusquedaScreen = () => {
@@ -119,24 +119,11 @@ const BusquedaScreen = () => {
               />
             </View>
           </Card>
-          <Button
-            titleStyle={{
-              fontSize: 13
-            }}
-            buttonStyle={{
-              marginRight: 10,
-              marginLeft: 10,
-              marginTop: 15,
-              paddingTop: 13,
-              paddingBottom: 13,
-              backgroundColor: '#4E31EB',
-              borderRadius: 10,
-              borderWidth: 1,
-              borderColor: '#fff',
-            }}
-            title="AGENDAR ASESORÍA"
-          />
-
+          <AppButton onPress={() => { }} title="AGENDAR ASESORÍA" style={{
+            marginTop: 15,
+            backgroundColor: "#4E31EB",
+            borderColor: '#4E31EB',
+          }} textStyle={{ color: '#fff' }} />
         </View>
 
       </ScrollView>

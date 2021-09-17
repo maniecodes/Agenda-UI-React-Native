@@ -1,13 +1,16 @@
 import React from 'react';
-import {StyleSheet, SafeAreaView, View} from 'react-native';
-import {Header} from 'react-native-elements';
-import {TouchableOpacity} from 'react-native-gesture-handler';
+import { StyleSheet, SafeAreaView, View } from 'react-native';
+import { Header } from 'react-native-elements';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
-const AppHeader = () => {
+const AppHeader = ({
+  title,
+  color
+}) => {
   return (
     <Header
-      containerStyle={{backgroundColor: '#fff', justifyContent: 'space-around'}}
+      containerStyle={{ backgroundColor: color, justifyContent: 'space-around' }}
       leftComponent={
         <View>
           <TouchableOpacity>
@@ -22,7 +25,7 @@ const AppHeader = () => {
           </TouchableOpacity>
         </SafeAreaView>
       }
-      centerComponent={{text: 'Historial assoria', style: styles.heading}}
+      centerComponent={{ text: title, style: styles.heading }}
     />
   );
 };

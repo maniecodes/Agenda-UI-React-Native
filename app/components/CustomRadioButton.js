@@ -11,7 +11,7 @@ const CustomRadioButton = ({ isChecked, text, onRadioButtonPress }) => {
     return (
         <View>
             <TouchableOpacity style={styles.mainContainer} onPress={onRadioButtonPress}>
-                <View style={[styles.radioButtonTextContainer]}>
+                <View>
                     <Text style={styles.radioButtonText}>{text}</Text>
                 </View>
                 <View style={[styles.radioButtonIcon]}>{_renderCheckedView()}</View>
@@ -24,18 +24,10 @@ const CustomRadioButton = ({ isChecked, text, onRadioButtonPress }) => {
 }
 const styles = StyleSheet.create({
     mainContainer: {
-        height: 40,
-        marginTop: 5,
-        marginBottom: 5,
-        marginLeft: 10,
-        marginRight: 10,
-        justifyContent: "center",
-        paddingLeft: 10,
-        paddingRight: 10,
-        // borderWidth: 0.5,
-        // borderColor: "red",
+        marginTop: 15,
+        marginBottom: 15,
+        justifyContent: "space-between",
         flexDirection: "row",
-        alignItems: "center",
     },
     radioButtonIcon: {
         backgroundColor: "#fff",
@@ -56,12 +48,6 @@ const styles = StyleSheet.create({
         borderWidth: 2,
         borderColor: "white",
     },
-    radioButtonTextContainer: {
-        flex: 5,
-        height: 50,
-        justifyContent: "center",
-        paddingLeft: 10,
-    },
     radioButtonText: {
         fontSize: 13,
         fontWeight: 'bold',
@@ -70,8 +56,6 @@ const styles = StyleSheet.create({
     line: {
         borderColor: '#C2C4EE',
         borderTopWidth: 1,
-        marginLeft: 20,
-        marginRight: 20
     },
 });
 

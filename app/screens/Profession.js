@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { SafeAreaView, View, StyleSheet } from 'react-native';
+import { SafeAreaView, Text, StyleSheet, View } from 'react-native';
 import ProfHeader from '../components/ProfHeader';
 import RadioButtonContainer from '../components/RadioButtonContainer';
 
@@ -41,7 +41,11 @@ const ProfessionScreen = () => {
         /*  Header Begin */
         <SafeAreaView style={styles.container}>
             <ProfHeader title="Área profesional" />
-            <RadioButtonContainer values={data} onPress={onRadioButtonPress} />
+            <View style={{ padding: 15 }}>
+                <Text style={{ fontSize: 12, color: '#7E8FB9' }}>Selecciona un área profesional</Text>
+                <RadioButtonContainer values={data} onPress={onRadioButtonPress} />
+            </View>
+
         </SafeAreaView>
         /*  Header End */
     );

@@ -1,13 +1,14 @@
 import 'react-native-gesture-handler';
 import React from 'react';
-import Svg, {Path} from 'react-native-svg';
-import {NavigationContainer} from '@react-navigation/native';
-import {createStackNavigator} from '@react-navigation/stack';
-import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import Svg, { Path } from 'react-native-svg';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import DetailsAsesoriaScreen from './app/screens/DetailsAsesoria';
 import BusquedaScreen from './app/screens/Busqueda';
 import DocumentScreen from './app/screens/Document';
 import ProfessionScreen from './app/screens/Profession';
+import AgendaScreen from './app/screens/Agenda';
 
 const Tab = createBottomTabNavigator();
 
@@ -46,6 +47,14 @@ function DocumentStackScreen() {
   );
 }
 
+function AgendaStackScreen() {
+  return (
+    <Stack.Navigator screenOptions={{ headerShown: false }}>
+      <Stack.Screen name="agenda" component={AgendaScreen} />
+    </Stack.Navigator>
+  )
+}
+
 function ProfessionStackScreen() {
   return (
     <Stack.Navigator
@@ -62,9 +71,9 @@ export default function App() {
     <NavigationContainer>
       <Tab.Navigator
         initialRouteName="Home"
-        screenOptions={({route}) => ({
+        screenOptions={({ route }) => ({
           headerShown: false,
-          tabBarIcon: ({focused, color, size}) => {
+          tabBarIcon: ({ focused, color, size }) => {
             let iconName;
             if (route.name === 'Home') {
               iconName = (
@@ -98,7 +107,7 @@ export default function App() {
                   />
                 </Svg>
               );
-            } else if (route.name === 'Document') {
+            } else if (route.name === 'Agenda') {
               iconName = (
                 <Svg
                   width="32"
@@ -167,10 +176,11 @@ export default function App() {
         {/* <Tab.Screen name="Settings" component={SettingsStackScreen} /> */}
         <Tab.Screen name="Profession" component={ProfessionStackScreen} />
         {/* <Tab.Screen name="Scan" component={SettingsStackScreen} /> */}
-        <Tab.Screen name="Document" component={DocumentStackScreen} />
+        {/* <Tab.Screen name="Document" component={DocumentStackScreen} /> */}
+        <Tab.Screen name="Agenda" component={AgendaStackScreen} />
         {/* <Tab.Screen name="Profile" component={SettingsStackScreen} /> */}
         <Tab.Screen name="Busqueda" component={BusquedaStackScreen} />
-       
+
       </Tab.Navigator>
     </NavigationContainer>
   );

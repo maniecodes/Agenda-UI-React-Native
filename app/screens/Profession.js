@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { SafeAreaView, Text, StyleSheet, View } from 'react-native';
 import ProfHeader from '../components/ProfHeader';
 import RadioButtonContainer from '../components/RadioButtonContainer';

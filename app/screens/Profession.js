@@ -4,7 +4,6 @@ import ProfHeader from '../components/ProfHeader';
 import RadioButtonContainer from '../components/RadioButtonContainer';
 
 
-
 const ProfessionScreen = () => {
     const data = [
         {
@@ -38,16 +37,15 @@ const ProfessionScreen = () => {
     };
 
     return (
-        /*  Header Begin */
         <SafeAreaView style={styles.container}>
+            {/* Header Begin */}
             <ProfHeader title="Área profesional" />
+            {/* Header End */}
             <View style={{ padding: 15 }}>
                 <Text style={{ fontSize: 12, color: '#7E8FB9' }}>Selecciona un área profesional</Text>
                 <RadioButtonContainer values={data} onPress={onRadioButtonPress} />
             </View>
-
         </SafeAreaView>
-        /*  Header End */
     );
 };
 

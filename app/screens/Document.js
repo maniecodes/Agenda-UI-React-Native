@@ -47,6 +47,8 @@ const DocumentScreen = props => {
 
                 </View>
                 {/* End List of Items  */}
+
+                {/* Button */}
                 <AppButton onPress={() => { }} title="VISUALIZAR" style={{
                     backgroundColor: "#4E31EB",
                     borderColor: '#4E31EB',

@@ -8,6 +8,7 @@ import {
   TextInput,
   Dimensions,
 } from 'react-native';
+import { ScrollView } from 'react-native-gesture-handler';
 import Slider from 'rn-range-slider';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import { Card } from 'react-native-elements';
@@ -17,7 +18,6 @@ import Rail from '../components/slider/Rail';
 import RailSelected from '../components/slider/RailSelected';
 import Notch from '../components/slider/Notch';
 import Label from '../components/slider/Label';
-import { ScrollView } from 'react-native-gesture-handler';
 import AppButton from '../components/Button';
 
 
@@ -84,6 +84,8 @@ const BusquedaScreen = () => {
               <Icon name="chevron-right" color="#5B74FB" size={23} style={{ paddingRight: 10 }} />
             </View>
           </Card>
+
+          {/* Range */}
           <Card containerStyle={styles.card}>
             <View>
               <Text style={{ fontSize: 14, fontWeight: 'bold', color: '#7E8FB9', paddingBottom: 5 }}>Tarifa</Text>
@@ -107,11 +109,13 @@ const BusquedaScreen = () => {
 
             </View>
           </Card>
+          {/* Range End */}
+
           <Card containerStyle={styles.card}>
             <View>
               <Text style={{ fontSize: 14, fontWeight: 'bold', color: '#7E8FB9' }}>Descripción</Text>
               <TextInput
-                placeholder="and"
+                placeholder="Enter a text"
                 value={text}
                 onChangeText={text => setText(text)}
                 multiline={true}
@@ -119,6 +123,8 @@ const BusquedaScreen = () => {
               />
             </View>
           </Card>
+
+          {/* Button */}
           <AppButton onPress={() => { }} title="AGENDAR ASESORÍA" style={{
             marginTop: 15,
             backgroundColor: "#4E31EB",
